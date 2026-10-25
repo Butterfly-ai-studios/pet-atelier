@@ -19,7 +19,7 @@
   <p class="lede">Everything on the page — every heading, button and hint — can be changed in the theme editor. Nothing is hard-coded.</p>
 
   <h2>Start here</h2>
-  <p>Pet Atelier is a warm, editorial theme for pet stores. In the theme editor, the homepage is built from sections you can add, remove and reorder: hero, featured collection, shop by category, Care Plan strip, a day with your pet, testimonials, journal preview and the breed finder. Each section's settings live beside it — change the copy there, not in code.</p>
+  <p>Pet Atelier is a warm, editorial theme for pet stores. In the theme editor, the homepage is built from sections you can add, remove and reorder: hero, featured collection, shop by category, Care Plan strip, a day with your pet, scroll story, testimonials, journal preview and the breed finder. Each section's settings live beside it — change the copy there, not in code.</p>
 
   <h2>Sections you'll use most</h2>
   <h3>Atelier hero</h3>
@@ -32,6 +32,8 @@
   <p>When a top-level menu link has children (for example Shop → Walk, Rest, Eat), the header shows a styled dropdown with a short description under each child. Those descriptions come from the collections themselves — edit a collection's description and the menu updates.</p>
   <h3>A day with your pet</h3>
   <p>A scrolling story: morning walk, play, dinner, last cuddle. Add one moment per part of the day, each with an image, a time label and one product. The story crossfades between moments as the shopper scrolls.</p>
+  <h3>Scroll story</h3>
+  <p>The signature section: the stage pins while chapters scroll, and each chapter's photo crossfades with a slow zoom. Add the section, pick the hero product, then add one Chapter block per step — each with a photo, a kicker, a title and text. A chapter without a photo keeps the previous chapter's photo; with no chapter photos at all, the section falls back to the product's featured image. On desktop, a paw hops along a dotted trail beside the chapters as you scroll; shoppers who prefer reduced motion get a static, readable version.</p>
   <h3>Breed and size finder</h3>
   <p>A three-question quiz. Design it as a funnel: who's it for, then how big, then what do they need. The last answer's collection is where results come from, so link each final answer carefully. If an answer has no collection of its own, the finder falls back to the fallback collection you set in the section — set one, or the "view all" button stays hidden.</p>
   <h3>Testimonials</h3>
@@ -40,6 +42,12 @@
   <p>Shows your three latest blog articles. Pick your blog in the section settings; the cards use each article's image, title and excerpt.</p>
   <h3>Paw divider</h3>
   <p>The motif between sections. Terracotta on cream is the house style.</p>
+
+  <h2>Theme settings and the Atelier preset</h2>
+  <p>Pet Atelier ships with one preset, <strong>Atelier</strong> — the signature look: Playfair Display headings, Work Sans body text, cream, ink, terracotta and forest, and a narrow page width. In the theme editor, use the preset picker to apply Atelier; applying it resets the presentational settings to those values. Under Theme settings you can then adjust typography, page width and margin, colors, and input corner radius, and under Branding you can pick your own favicon — leave it empty and the theme's paw ships automatically. Social links live under Social media. Checkout branding (logo, colors and fonts at checkout) is not set in the theme: set it in Shopify admin under Settings → Checkout so the checkout matches the storefront.</p>
+
+  <h2>Header and footer</h2>
+  <p>The header holds the logo, the menu, and a sticky toggle. The announcement bar rotates three messages (edit all three texts, plus an optional link, in the header settings) and the bar can be switched off. The hotline line reads "Speak to a pet specialist": set the number in the header settings, or leave it empty and the line links to the contact page instead. The store locator link points at the page handle you set (default "Our Ateliers"). On phones, shoppers also get a bottom bar with Home, Search, Account and Cart — it needs no setup. The footer holds your menus, a newsletter signup, and social links; payment icons appear automatically from your shop's payment settings.</p>
 
   <h2>Size and breed guide (on every sized product)</h2>
   <p>The product page shows a "Size and breed guide" next to the size picker: a table (XS–XL) with chest and neck measurements in cm and inches, plus example breeds. Edit the surrounding text in the editor under Product information → Size and fit. The fit hint ("Between sizes? Size up…") sits under the size options.</p>
@@ -50,17 +58,35 @@
   <p>A sticky add-to-cart bar appears at the bottom of product pages once the buy box scrolls out of view, so shoppers never lose the purchase button on long pages. It follows the selected variant and selling plan, and it sits above the mobile bottom navigation.</p>
 
   <h2>My Pets (customer accounts)</h2>
-  <p>Customers see pet profiles on their account page when the customer has the metafield <code>custom.pet_profiles</code> (type: JSON) filled in. Format — a list of pets:</p>
+  <p>On stores using classic customer accounts, customers see pet profiles on their account page when the customer has the metafield <code>custom.pet_profiles</code> (type: JSON) filled in. Classic accounts were deprecated by Shopify in February 2026 and are no longer offered to new stores, so on stores using the current customer accounts the account area is hosted by Shopify and the theme's account pages do not render — the pet data still lives in the same metafield, ready for an account app or extension to surface. Format — a list of pets:</p>
 <pre><code>[
   { "name": "Biscuit", "breed": "Beagle", "size": "M", "weight": "12 kg", "birthday": "2022-05-14" }
 ]</code></pre>
-  <p>Add it in Shopify admin → Customers → the customer → Metafields. Each pet gets a card with their size remembered ("We pre-select size M on sized products") and a shop-for link. Pair with your favourite form or profile app if you want customers to edit profiles themselves.</p>
+  <p>Add it in Shopify admin → Customers → the customer → Metafields. On classic accounts, each pet gets a card with their size remembered ("We pre-select size M on sized products") and a shop-for link. Pair with your favourite form or profile app if you want customers to edit profiles themselves.</p>
 
   <h2>3D and AR products</h2>
   <p>Upload a GLB (and USDZ for iOS AR) as product media (Files or product media → Add media → 3D model). Pet Atelier renders it natively in the gallery with a 3D badge on the thumbnail and an AR hint. Best practice: one hero 3D product per collection is plenty — carriers, beds and enclosures show best.</p>
 
   <h2>Filters shoppers actually use</h2>
   <p>In Shopify Search &amp; Discovery, add filters for your pet metafields — pet type, breed size, material, use case. Pet Atelier's collection sidebar picks them up automatically; no setup in the theme.</p>
+
+  <h2>Cart</h2>
+  <p>The cart page carries a free-shipping bar: switch it on and set the threshold in whole dollars (default $75) in the cart settings, and the bar fills as the cart total grows. Gift options add a wrap tick-box and a handwritten-note field: the tick-box saves as an order attribute and the note saves as the cart note, so you can fulfill them by hand. The theme charges no gift-wrap fee.</p>
+
+  <h2>Product cards and the product page</h2>
+  <p>On collection and featured-collection grids, cards swap images and zoom on hover, show a computed Save % pill on discounted products and a Sold out pill when a product is gone. The Quick buy button adds the first available variant and takes the shopper straight to checkout, skipping the cart. On the product page itself, the "Who is this for?" fields (under Product information → Pet details) ask for the pet's name and breed; both save as line-item properties, so you see them in the cart and on the order. Tapping a product image opens it large in a lightbox.</p>
+
+  <h2>Search, blog and pages</h2>
+  <p>On the search page, typing two or more letters shows up to five product suggestions with images; the full results page follows. Blog comments work when you enable them on the blog in admin. The contact template includes a contact form whose messages go to the store's contact email. The gift card and password pages are branded automatically when used.</p>
+
+  <h2>Frequently asked questions</h2>
+  <p><strong>How do I apply the Atelier preset?</strong> In the theme editor, use the preset picker and choose Atelier. It resets the presentational settings — typography, colors, page width — to the signature look.</p>
+  <p><strong>Why does the scroll story show no photos?</strong> Pick a hero product in the section settings and add a photo to each Chapter block. A chapter without a photo keeps the previous chapter's photo; with no chapter photos at all, the section uses the product's featured image.</p>
+  <p><strong>Why don't Care Plan cards appear?</strong> Cards only appear when the product has selling plans from Shopify Subscriptions or your subscription app. The theme never invents plans.</p>
+  <p><strong>Why don't pet profiles show?</strong> Pet cards render on classic-account stores only. On stores using the current customer accounts, the account area is hosted by Shopify — see the My Pets section.</p>
+  <p><strong>Does gift wrap cost the shopper extra?</strong> No. The theme adds no gift-wrap fee; the tick-box is an order attribute and the note is the cart note, for you to fulfill by hand.</p>
+  <p><strong>How do I show filters on collections?</strong> Add them in Shopify Search &amp; Discovery for your pet metafields; the collection sidebar picks them up automatically.</p>
+  <p><strong>Still stuck?</strong> See the <a href="support.html">support page</a> for the troubleshooting checklist and how to contact the theme team.</p>
 
   <h2>Performance notes</h2>
   <p>The theme ships no heavy JavaScript libraries. Product media is lazy-loaded, motion respects "reduced motion" settings, and the 3D viewer loads only on products that have models.</p>

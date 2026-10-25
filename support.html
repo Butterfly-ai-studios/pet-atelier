@@ -35,12 +35,25 @@
   <h3>The 3D viewer doesn't appear</h3>
   <p>The viewer only loads on products that have a 3D model (GLB) attached as product media. Attach one under Products → the product → Media → Add media → 3D model, and wait for its status to read Ready.</p>
   <h3>Pet profiles don't show on the account page</h3>
-  <p>Profiles come from the customer metafield <code>custom.pet_profiles</code> (JSON). See the documentation's My Pets section for the exact format.</p>
+  <p>Profiles come from the customer metafield <code>custom.pet_profiles</code> (JSON) and render on classic-account stores only. On stores using the current customer accounts, the account area is hosted by Shopify, so the theme's pet cards do not appear. See the documentation's My Pets section for the exact format.</p>
+  <h3>The scroll story shows no photos</h3>
+  <p>Pick a hero product in the section settings and add a photo to each Chapter block. A chapter without a photo keeps the previous chapter's photo; with no chapter photos at all, the section falls back to the product's featured image.</p>
+  <h3>I can't find the Atelier preset</h3>
+  <p>Pet Atelier ships with one preset, Atelier. In the theme editor, use the preset picker to apply it; applying it resets the presentational settings to the signature look.</p>
   <h3>Something looks off after an update</h3>
   <p>Re-publish the theme, then hard-refresh the storefront (Ctrl/Cmd + Shift + R). If the problem survives a hard refresh, note the browser and device and contact us below.</p>
 
   <h2>Contact the theme team</h2>
   <p>Use the support link on the Theme Store listing for Pet Atelier — messages there reach the theme team directly. Or email us at <a href="mailto:support@vooqio.com">support@vooqio.com</a>. Include your store URL, theme version, and the steps to reproduce the issue, and we'll get back to you.</p>
+  <p>Our support policy: we fix bugs in the theme and answer questions about using it. Custom work beyond the theme's settings is not included in the theme price.</p>
+  <form class="contact-form" action="mailto:support@vooqio.com?subject=Pet%20Atelier%20support" method="post" enctype="text/plain">
+    <p><label>Your name<br><input type="text" name="Name" required></label></p>
+    <p><label>Store URL<br><input type="text" name="Store URL" required></label></p>
+    <p><label>Theme version<br><input type="text" name="Theme version" value="1.0.0"></label></p>
+    <p><label>Message<br><textarea name="Message" rows="4" required></textarea></label></p>
+    <p><button type="submit">Send message</button></p>
+    <p>This opens your email app addressed to the theme team — nothing is sent until you send it.</p>
+  </form>
 
   <footer>Pet Atelier theme, version 1.0.0, by VOOQIO INC. · <a href="docs.html">Documentation</a></footer>
 </div>
