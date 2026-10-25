@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pet Atelier theme — Documentation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="brand"><span class="paw">🐾</span><span class="name">Pet <em>Atelier</em></span></header>
+  <nav class="top">
+    <a href="index.html">Home</a>
+    <a href="docs.html" aria-current="page">Documentation</a>
+    <a href="support.html">Support</a>
+  </nav>
+  <h1>Documentation</h1>
+  <p class="lede">Everything on the page — every heading, button and hint — can be changed in the theme editor. Nothing is hard-coded.</p>
+
+  <h2>Start here</h2>
+  <p>Pet Atelier is a warm, editorial theme for pet stores. In the theme editor, the homepage is built from sections you can add, remove and reorder: hero, featured collection, shop by category, Care Plan strip, a day with your pet, testimonials, journal preview and the breed finder. Each section's settings live beside it — change the copy there, not in code.</p>
+
+  <h2>Sections you'll use most</h2>
+  <h3>Atelier hero</h3>
+  <p>Your storefront opener. Pick the arch shape for the signature look. Write the heading like you'd talk to a pet owner, not a marketing department. The first slide loads first for speed; the rest load as the carousel turns.</p>
+  <h3>Shop by category</h3>
+  <p>Photo tiles for each collection, with the real product count under each name. Pick a collection per tile; the tile uses the collection's image, or its first product's image if the collection has none.</p>
+  <h3>Care Plan strip</h3>
+  <p>A short band on the homepage that points shoppers at your subscribable foods. The button goes to the collection you choose — set it to the collection that actually carries selling plans.</p>
+  <h3>Shop menu with descriptions</h3>
+  <p>When a top-level menu link has children (for example Shop → Walk, Rest, Eat), the header shows a styled dropdown with a short description under each child. Those descriptions come from the collections themselves — edit a collection's description and the menu updates.</p>
+  <h3>A day with your pet</h3>
+  <p>A scrolling story: morning walk, play, dinner, last cuddle. Add one moment per part of the day, each with an image, a time label and one product. The story crossfades between moments as the shopper scrolls.</p>
+  <h3>Breed and size finder</h3>
+  <p>A three-question quiz. Design it as a funnel: who's it for, then how big, then what do they need. The last answer's collection is where results come from, so link each final answer carefully. If an answer has no collection of its own, the finder falls back to the fallback collection you set in the section — set one, or the "view all" button stays hidden.</p>
+  <h3>Testimonials</h3>
+  <p>Three quote blocks under "Loved by the pack". Replace the demo quotes with your own customers' words — owner name and pet name included. The theme never invents aggregate ratings or review counts.</p>
+  <h3>Journal preview</h3>
+  <p>Shows your three latest blog articles. Pick your blog in the section settings; the cards use each article's image, title and excerpt.</p>
+  <h3>Paw divider</h3>
+  <p>The motif between sections. Terracotta on cream is the house style.</p>
+
+  <h2>Size and breed guide (on every sized product)</h2>
+  <p>The product page shows a "Size and breed guide" next to the size picker: a table (XS–XL) with chest and neck measurements in cm and inches, plus example breeds. Edit the surrounding text in the editor under Product information → Size and fit. The fit hint ("Between sizes? Size up…") sits under the size options.</p>
+  <p>Better fit data per product: add product metafields for measurements in your product bulk editor if your sizes differ from the guide.</p>
+
+  <h2>Care Plans (subscriptions)</h2>
+  <p>If a product has selling plans (from Shopify Subscriptions or your subscription app), Pet Atelier presents them as Care Plan cards in the buy box — one-time vs plan, with the plan price for the selected variant. On the <strong>Food product template</strong>, the Care Plan comes first, before size — food converts on the plan. Pause, skip and cancel copy is editable in the section settings. The theme never shows plans that don't exist on the product.</p>
+  <p>A sticky add-to-cart bar appears at the bottom of product pages once the buy box scrolls out of view, so shoppers never lose the purchase button on long pages. It follows the selected variant and selling plan, and it sits above the mobile bottom navigation.</p>
+
+  <h2>My Pets (customer accounts)</h2>
+  <p>Customers see pet profiles on their account page when the customer has the metafield <code>custom.pet_profiles</code> (type: JSON) filled in. Format — a list of pets:</p>
+<pre><code>[
+  { "name": "Biscuit", "breed": "Beagle", "size": "M", "weight": "12 kg", "birthday": "2022-05-14" }
+]</code></pre>
+  <p>Add it in Shopify admin → Customers → the customer → Metafields. Each pet gets a card with their size remembered ("We pre-select size M on sized products") and a shop-for link. Pair with your favourite form or profile app if you want customers to edit profiles themselves.</p>
+
+  <h2>3D and AR products</h2>
+  <p>Upload a GLB (and USDZ for iOS AR) as product media (Files or product media → Add media → 3D model). Pet Atelier renders it natively in the gallery with a 3D badge on the thumbnail and an AR hint. Best practice: one hero 3D product per collection is plenty — carriers, beds and enclosures show best.</p>
+
+  <h2>Filters shoppers actually use</h2>
+  <p>In Shopify Search &amp; Discovery, add filters for your pet metafields — pet type, breed size, material, use case. Pet Atelier's collection sidebar picks them up automatically; no setup in the theme.</p>
+
+  <h2>Performance notes</h2>
+  <p>The theme ships no heavy JavaScript libraries. Product media is lazy-loaded, motion respects "reduced motion" settings, and the 3D viewer loads only on products that have models.</p>
+
+  <footer>Pet Atelier theme, version 1.0.0, by VOOQIO INC. · <a href="support.html">Support</a></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pet Atelier theme — Support</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="brand"><span class="paw">🐾</span><span class="name">Pet <em>Atelier</em></span></header>
+  <nav class="top">
+    <a href="index.html">Home</a>
+    <a href="docs.html">Documentation</a>
+    <a href="support.html" aria-current="page">Support</a>
+  </nav>
+  <h1>Support</h1>
+  <p class="lede">Most issues are setup, not bugs. Work through the checklist below first — it fixes the majority of reports in minutes.</p>
+
+  <h2>Before you write in</h2>
+  <ul>
+    <li>Check the <a href="docs.html">documentation</a> for the section you're stuck on.</li>
+    <li>Note your theme version (Theme settings → theme info) and the exact steps that reproduce the problem.</li>
+    <li>If a section looks empty, check its settings first: most sections need a collection, a blog or a menu picked before they show anything.</li>
+  </ul>
+
+  <h2>Common fixes</h2>
+  <h3>The Shop dropdown shows no descriptions</h3>
+  <p>Descriptions come from the collections themselves. Edit each collection's description in Products → Collections and the menu updates automatically.</p>
+  <h3>The finder shows "No matches yet"</h3>
+  <p>Either the final answer's collection is empty, or no fallback collection is set. Set a fallback collection in the finder section, and make sure the collections linked from the final answers actually contain products.</p>
+  <h3>Care Plan cards don't appear on a product</h3>
+  <p>Cards only appear when the product has selling plans from Shopify Subscriptions or your subscription app. The theme never invents plans. Check the product's selling plans in admin first.</p>
+  <h3>The 3D viewer doesn't appear</h3>
+  <p>The viewer only loads on products that have a 3D model (GLB) attached as product media. Attach one under Products → the product → Media → Add media → 3D model, and wait for its status to read Ready.</p>
+  <h3>Pet profiles don't show on the account page</h3>
+  <p>Profiles come from the customer metafield <code>custom.pet_profiles</code> (JSON). See the documentation's My Pets section for the exact format.</p>
+  <h3>Something looks off after an update</h3>
+  <p>Re-publish the theme, then hard-refresh the storefront (Ctrl/Cmd + Shift + R). If the problem survives a hard refresh, note the browser and device and contact us below.</p>
+
+  <h2>Contact the theme team</h2>
+  <p>Use the support link on the Theme Store listing for Pet Atelier — messages there reach the theme team directly. Include your store URL, theme version, and the steps to reproduce the issue, and we'll get back to you.</p>
+
+  <footer>Pet Atelier theme, version 1.0.0, by VOOQIO INC. · <a href="docs.html">Documentation</a></footer>
+</div>
+</body>
+</html>
